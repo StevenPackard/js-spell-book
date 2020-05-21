@@ -8,7 +8,7 @@ function _drawSpells() {
 
   let template = ''
   spells.forEach(s => {
-    template += `<li onclick="app.spellsController.getDetails('${s.id}')">${s.name}</li>`
+    template += `<li class="action" onclick="app.spellsController.getDetails('${s.id}')">${s.name}</li>`
   });
   document.getElementById("spells").innerHTML = template
 }

@@ -11,14 +11,15 @@ export default class Spell {
   }
 
   get MyTemplate() {
-    return `<li onclick="app.spellsController.setActive('${this.id}')">${this.name}</li>`
+    return `<li class="action" onclick="app.spellsController.setActive('${this.id}')">${this.name}</li>`
   }
 
   get ActiveTemplate() {
     return /*html*/`
-        <div class="col-8 border border-dark mt-5">
-            <h1>${this.name}</h1>
-            <h4>Range: ${this.range} | Level: ${this.level} | Duration: ${this.duration}</h4>
+        <div class="col-8 bg-white shadow border border-dark mt-5">
+            <h3 class="mt-3">${this.name}</h3>
+            <h5>Range: ${this.range} | Level: ${this.level}</h5>
+            <h5>Duration: ${this.duration}</h5>
             <p>"${this.description}"</p>
             ${this.SubTemplate}
         </div>
@@ -28,11 +29,11 @@ export default class Spell {
   get SubTemplate() {
     if (this.user) {
       return `
-      <button class="btn btn-success my-2" onclick="app.spellsController.deleteSpell()">Delete Spell</button>
+      <button class="btn btn-success my-3" onclick="app.spellsController.deleteSpell()">Delete Spell</button>
       `
     }
     return `
-      <button class="btn btn-success my-2" onclick="app.spellsController.addSpell()">Collect Spell</button>
+      <button class="btn btn-success my-3" onclick="app.spellsController.addSpell()">Collect Spell</button>
       `
   }
 }

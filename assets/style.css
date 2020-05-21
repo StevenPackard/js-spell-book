@@ -2,6 +2,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 8px;
 }
 
 main {
@@ -11,7 +13,21 @@ main {
 
 
 .long-list{
-    max-height: 35vh;
+    max-height: 32vh;
     overflow-y: auto;
+}
+
+.action{
+    cursor: pointer;
+}
+
+.wrap{
+    word-break: break-all;
+}
+.width{
+    width: 20vw;
+}
+#center{
+    width: 60%;
 }
 
