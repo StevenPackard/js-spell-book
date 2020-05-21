@@ -1,7 +1,10 @@
-import ValuesController from "./Controllers/ValuesController.js";
+import SpellsController from "./Controllers/SpellsController.js";
 
 class App {
-  valuesController = new ValuesController();
+  constructor() {
+    this.spellsController = new SpellsController();
+  }
+
 }
 
 window["app"] = new App();
