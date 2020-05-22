@@ -59,4 +59,8 @@ export default class SpellsController {
   getDetails(id) {
     _spellsService.getDetails(id)
   }
+
+  spin() {
+    document.body.classList.add("fa-spin")
+  }
 }

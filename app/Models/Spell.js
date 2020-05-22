@@ -18,7 +18,7 @@ export default class Spell {
     return /*html*/`
         <div class="col-8 bg-white shadow border border-dark mt-5">
             <h3 class="mt-3">${this.name}</h3>
-            <h5>Range: ${this.range} | Level: ${this.level}</h5>
+            <h5>Range: ${this.range} <i class="fas fa-feather-alt"></i> Level: ${this.level}</h5>
             <h5>Duration: ${this.duration}</h5>
             <p>"${this.description}"</p>
             ${this.SubTemplate}
